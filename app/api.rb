@@ -14,6 +14,9 @@ module GrapeVersioningExample
     end
 
     mount ::GrapeVersioningExample::Endpoints::AvailableFoos
+    mount ::GrapeVersioningExample::Endpoints::LostFoosV1
+    mount ::GrapeVersioningExample::Endpoints::LostFoosV2
+    mount ::GrapeVersioningExample::Endpoints::AvailableFoos
     mount ::GrapeVersioningExample::Endpoints::PingV2
     mount ::GrapeVersioningExample::Endpoints::PingV1
   end
