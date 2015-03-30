@@ -2,9 +2,9 @@ module GrapeVersioningExample
   class API < Grape::API
     prefix 'api'
 
-    rescue_from :all do |e|
-      [ 500, {"Content-Type" => "application/vnd.error+json"}, { error: e.message } ]
-    end
+    # rescue_from :all do |e|
+    #   [ 500, {"Content-Type" => "application/vnd.error+json"}, { error: e.message } ]
+    # end
 
     before do
       header 'Access-Control-Allow-Origin', '*'
