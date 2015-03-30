@@ -2,10 +2,10 @@
 module GrapeVersioningExample
   module Endpoints
     class AvailableFoos < Grape::API
-      version :v1, using: :header, vendor: 'available_foos', strict: true, cascade: true do 
-        content_type :available_foos,  'application/vnd.available_foos-v1+json'
-        formatter :available_foos,  lambda { |object, env| object }
-        format :available_foos
+      version :v1, using: :header, vendor: 'available_foos', strict: true, cascade: false do 
+        content_type :v1_available_foos,  'application/vnd.available_foos-v1+json'
+        # formatter :v1_available_foos,  lambda { |object, env| object }
+        format :v1_available_foos
 
         resources :available_foos do
 
@@ -19,16 +19,16 @@ module GrapeVersioningExample
       end
 
       version :v2, using: :header, vendor: 'available_foos', strict: true, cascade: true do 
-        content_type :available_foos,  'application/vnd.available_foos-v2+json'
-        formatter :available_foos,  lambda { |object, env| object }
-        format :available_foos
+        content_type :v2_available_foos,  'application/vnd.available_foos-v2+json'
+        # formatter :v2_available_foos,  lambda { |object, env| object }
+        format :v2_available_foos
 
         resources :available_foos do
  
           params do
           end
           get do
-            [{"foos" => 'new FOO'}]
+            [{"foos" => 'NEW FOO'}]
           end
 
         end
