@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'grape', '0.9.0'
+gem 'grape', github: 'intridea/grape'
 gem 'goliath', '~> 1.0.4'
 
 group :development do

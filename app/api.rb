@@ -13,8 +13,8 @@ module GrapeVersioningExample
       header 'X-Robots-Tag', 'noindex'
     end
 
-    mount ::GrapeVersioningExample::Endpoints::LostFoosV1
     mount ::GrapeVersioningExample::Endpoints::LostFoosV2
+    mount ::GrapeVersioningExample::Endpoints::LostFoosV1
     mount ::GrapeVersioningExample::Endpoints::PingV1
     mount ::GrapeVersioningExample::Endpoints::PingV2
   end
