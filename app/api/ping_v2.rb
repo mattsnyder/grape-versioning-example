@@ -5,8 +5,10 @@ module GrapeVersioningExample
       content_type :v2_ping,  'application/vnd.mattsnyder.ping-v2+json'
       format :v2_ping
 
-      get '/ping' do
-        { ping: "version 2" }
+      resources :example do
+        get '/ping' do
+          { ping: "version 2" }
+        end
       end
     end
   end
