@@ -10,8 +10,8 @@ bundle exec ruby server.rb
 Then curl with these commands to test versioning:
 
 ```
-curl -v -H Accept:application/vnd.mattsnyder.ping-v1+json "http://localhost:9000/api/ping"
-curl -v -H Accept:application/vnd.mattsnyder.ping-v2+json "http://localhost:9000/api/ping"
+curl -v -H Accept:application/vnd.mattsnyder.ping-v1+json "http://localhost:9000/api/example/ping"
+curl -v -H Accept:application/vnd.mattsnyder.ping-v2+json "http://localhost:9000/api/example/ping"
 ```
 
 Can also run specs with:
