@@ -1,7 +1,5 @@
 # grape-versioning-example
-This repo exists to be an example of grape versioning, because I experienced problem safter upgrading from version 0.9
-to 0.11
-https://github.com/intridea/grape/issues/968
+This repo exists to provide an example of the grape versioning error we experienced after upgrading Grape from version 0.9 to 0.11 (https://github.com/intridea/grape/issues/968)
 
 Run the goliath api server with
 
