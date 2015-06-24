@@ -2,9 +2,9 @@ module GrapeVersioningExample
   class API < Grape::API
     prefix 'api'
 
-    # rescue_from :all do |e|
-    #   [ 500, {"Content-Type" => "application/vnd.error+json"}, { error: e.message } ]
-    # end
+    rescue_from :all do |e|
+      [ 500, {"Content-Type" => "application/vnd.error+json"}, { error: e.message } ]
+    end
 
     before do
       header 'Access-Control-Allow-Origin', '*'
@@ -13,6 +13,7 @@ module GrapeVersioningExample
       header 'X-Robots-Tag', 'noindex'
     end
 
+    # rescue_from :all has to be above mount points!
     mount ::GrapeVersioningExample::Endpoints::LostFoosV2
     mount ::GrapeVersioningExample::Endpoints::LostFoosV1
     mount ::GrapeVersioningExample::Endpoints::PingV1
