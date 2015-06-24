@@ -2,6 +2,11 @@ module GrapeVersioningExample
   class API < Grape::API
     prefix 'api'
 
+    # Questions
+    # cascade on endpoint - is it needed for all versions
+    # why are all available_versions not present in grape (Header class)
+    # how is mount vs opening classes changing available_versions
+
     rescue_from :all do |e|
       [ 500, {"Content-Type" => "application/vnd.error+json"}, { error: e.message } ]
     end
